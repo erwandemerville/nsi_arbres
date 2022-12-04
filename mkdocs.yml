@@ -3,8 +3,8 @@ theme:
   name: material
 site_url: https://erwandemerville.github.io/nsi_arbres/
 nav:
-    - Définitions et vocabulaire: vocabulaire
-    - Parcours d'arbres binaires: parcours
+    - Définitions et vocabulaire: vocabulaire.md
+    - Parcours d'arbres binaires: parcours.md
     - Fiche d'exercices 1: fiche1_vocabulaire.pdf
     
 markdown_extensions:

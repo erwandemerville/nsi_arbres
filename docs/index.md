@@ -2,9 +2,9 @@
 
 Bienvenue, ce cours se décompose en plusieurs parties :
 
-* [Arbres : définitions et vocabulaire](vocabulaire)
+* [Arbres : définitions et vocabulaire](vocabulaire.md)
 
-* [Parcours d'arbres binaires](parcours)
+* [Parcours d'arbres binaires](parcours.md)
 
 * Type abstrait "Arbre binaire" (*à venir*)
 
@@ -20,4 +20,4 @@ Voici également des fiches d'exercices *PDF* pour vous entraîner :
 
 *Demerville Erwan*
 
-Me contacter : [demerville.erwan@gmail.com](demerville.erwan@gmail.com)
+Me contacter : <demerville.erwan@gmail.com>
