@@ -99,15 +99,19 @@ Un **arbre** est une structure de données :
 
 ## Les arbres binaires
 
-**Définition** : Un <u>**arbre binaire**</u> est un **arbre** dont chaque noeud comporte **au plus deux fils**.
+### Définition
 
 Un **arbre binaire** est :
+- soit un **arbre vide**, qui ne contient **aucun noeud**,
+- soit un **arbre** possédant **un noeud**, appelé la **racine de l'arbre**, relié à exactement deux arbres binaires, respectivement appelés **sous-arbre gauche** et **sous-arbre droit** (pouvant être vides).
 
-* soit un **arbre vide**, qui **ne contient aucun noeud**.
-* soit un arbre dont les **noeuds** sont structurés de la manière suivante :
-    * un **noeud** est appelé la **racine** de l'arbre,
-    * les **noeuds restants** sont séparés en deux ensembles qui forment récursivement **deux sous-arbres**, le **sous-arbre gauche** et le **sous-arbre droit**,
-    * la **racine de l'arbre** est reliée à la **racine du sous-arbre gauche** et à la **racine du sous-arbre droit**.
+La **racine** d'un **arbre binaire** est reliée à la **racine du sous-arbre gauche** et à la **racine du sous-arbre droit** (lorsqu'ils ne sont pas **vides**).
+
+Un **arbre binaire** possède les particularités suivantes qui le distinguent d'un arbre enraciné :
+* Il peut être un **arbre vide**
+* Il possède **TOUJOURS deux sous-arbres** (qui peuvent être **vides** où mener au **noeud racine du sous-arbre**)
+* La racine d'un **arbre binaire** possède **0**, **1** ou **2 noeuds fils**.
+* Le placement des éléments à **gauche** ou à **droite** doit suivre une **logique interne** et n'est pas aléatoire.
 
 ![images/arbre_binaire.png](images/arbre_binaire.png)
 
@@ -134,7 +138,7 @@ Un **arbre binaire** est :
 
 #### Encadrement avec une profondeur 0 pour la racine :
 
-À chaque **niveau** de l'arbre, le nombre de noeuds $n$ est de $n = 2^{niveau}$, il en découle :
+À chaque **niveau** de l'arbre, le nombre de noeuds est de $2^{niveau}$, il en découle :
 
 * Pour une **taille n** donnée : $\lfloor log_{2}(n) \rfloor \leq h \leq n-1$
     * **h** min lorsque **arbre complet**, **h** max lorsque **arbre filiforme**
@@ -145,7 +149,7 @@ Un **arbre binaire** est :
 
 #### Encadrement avec une profondeur 1 pour la racine :
 
-À chaque **niveau** de l'arbre, le nombre de noeuds $n$ est de $n = 2^{niveau-1}$, il en découle :
+À chaque **niveau** de l'arbre, le nombre de noeuds est de $2^{niveau-1}$, il en découle :
 
 * Pour une **taille n** donnée : $\lceil log_{2}(n+1) \rceil \leq h \leq n$
     * **h** min lorsque **arbre complet**, **h** max lorsque **arbre filiforme**
