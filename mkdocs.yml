@@ -6,7 +6,8 @@ nav:
     - Définitions et vocabulaire: vocabulaire.md
     - Parcours d'arbres binaires: parcours.md
     - Fiche d'exercices 1: fiche1_vocabulaire.pdf
-    
+    - Fiche d'exercices 2: fiche2_parcours.pdf
+       
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true

@@ -16,6 +16,8 @@ Voici également des fiches d'exercices *PDF* pour vous entraîner :
 
 * [Exercices - Vocabulaire sur les arbres](fiche1_vocabulaire.pdf)
 
+* [Exercices - Parcours d'un arbre binaire](fiche2_parcours.pdf)
+
 ---
 
 *Demerville Erwan*

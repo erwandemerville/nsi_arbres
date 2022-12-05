@@ -1,6 +1,15 @@
 # Parcours d'arbres
 
-Un **parcours d'arbre** est une façon d'**ordonner les noeuds** d'un **arbre** afin de les **parcourir**.
+**Définition** : Un **parcours d'arbre** est un type d'**algorithme** consistant à **visiter les noeuds** d'un arbre en suivant un certain **ordre**.
+
+Pourquoi parcourir ?
+* Rechercher si un arbre contient une valeur particulière.
+* Compter les noeuds qui contiennent une valeur donnée.
+* etc.
+
+Il existe deux façons de parcourir un arbre :
+* le **parcours en profondeur**
+* le **parcours en largeur**
 
 Voici un **arbre binaire** que l'on souhaite **parcourir** :
 
@@ -47,3 +56,12 @@ Dans le parcours **infixe**, le traitement de la **racine** est effectué **entr
 Sur l'arbre ci-dessous : `[A, B, C, D, E, F, G, H]`
 
 ![images/arbre_parcours_v2.png](images/arbre_parcours_annote.png)
+
+### Autre méthode
+
+On peut également retrouver visuellement les trois parcours **préfixe**, **infixe** et **postfixe** en ajoutant les sous-arbres vides (et arêtes associées) au dessin d'un arbre binaire. Si on trace à présent le contour de l'arbre :
+* l'ordre **préfixe** est obtenu en listant les **noeuds** lorsque l'on passe à leur *gauche*,
+* l'ordre **suffixe** est obtenu en listant les **noeuds** lorsque l'on passe à leur *droite*,
+* l'ordre **infixe** est obtenu en listant les **noeuds** lorsque l'on passe en *dessous*.
+
+Pour vous entraîner : voir [cette fiche d'exercices](fiche2_parcours.pdf).
