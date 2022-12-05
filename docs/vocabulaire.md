@@ -108,6 +108,7 @@ Un **arbre binaire** est :
 La **racine** d'un **arbre binaire** est reliée à la **racine du sous-arbre gauche** et à la **racine du sous-arbre droit** (lorsqu'ils ne sont pas **vides**).
 
 Un **arbre binaire** possède les particularités suivantes qui le distinguent d'un arbre enraciné :
+
 * Il peut être un **arbre vide**
 * Il possède **TOUJOURS deux sous-arbres** (qui peuvent être **vides** où mener au **noeud racine du sous-arbre**)
 * La racine d'un **arbre binaire** possède **0**, **1** ou **2 noeuds fils**.

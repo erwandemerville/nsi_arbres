@@ -13,6 +13,8 @@ markdown_extensions:
       generic: true
   - pymdownx.highlight:
       anchor_linenums: true
+  - toc:
+      title: Sur cette page
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
