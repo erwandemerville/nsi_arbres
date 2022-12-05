@@ -60,6 +60,7 @@ Sur l'arbre ci-dessous : `[A, B, C, D, E, F, G, H]`
 ### Autre méthode
 
 On peut également retrouver visuellement les trois parcours **préfixe**, **infixe** et **postfixe** en ajoutant les sous-arbres vides (et arêtes associées) au dessin d'un arbre binaire. Si on trace à présent le contour de l'arbre :
+
 * l'ordre **préfixe** est obtenu en listant les **noeuds** lorsque l'on passe à leur *gauche*,
 * l'ordre **suffixe** est obtenu en listant les **noeuds** lorsque l'on passe à leur *droite*,
 * l'ordre **infixe** est obtenu en listant les **noeuds** lorsque l'on passe en *dessous*.
