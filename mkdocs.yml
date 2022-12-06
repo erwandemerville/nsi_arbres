@@ -15,8 +15,10 @@ markdown_extensions:
       anchor_linenums: true
   - toc:
       title: Sur cette page
+  - admonition
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.details
   - pymdownx.superfences
 
 extra_javascript:

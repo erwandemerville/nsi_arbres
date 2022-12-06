@@ -139,7 +139,7 @@ Un **arbre binaire** possède les particularités suivantes qui le distinguent d
 
 #### Encadrement avec une profondeur 0 pour la racine :
 
-À chaque **niveau** de l'arbre, le nombre de noeuds est de $2^{niveau}$, il en découle :
+À chaque **niveau** de l'arbre, le nombre de noeuds maximal est de $2^{niveau}$, il en découle :
 
 * Pour une **taille n** donnée : $\lfloor log_{2}(n) \rfloor \leq h \leq n-1$
     * **h** min lorsque **arbre complet**, **h** max lorsque **arbre filiforme**
@@ -150,7 +150,7 @@ Un **arbre binaire** possède les particularités suivantes qui le distinguent d
 
 #### Encadrement avec une profondeur 1 pour la racine :
 
-À chaque **niveau** de l'arbre, le nombre de noeuds est de $2^{niveau-1}$, il en découle :
+À chaque **niveau** de l'arbre, le nombre de noeuds maximal est de $2^{niveau-1}$, il en découle :
 
 * Pour une **taille n** donnée : $\lceil log_{2}(n+1) \rceil \leq h \leq n$
     * **h** min lorsque **arbre complet**, **h** max lorsque **arbre filiforme**
