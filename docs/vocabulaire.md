@@ -139,22 +139,18 @@ Un **arbre binaire** possède les particularités suivantes qui le distinguent d
 
 #### Encadrement avec une profondeur 0 pour la racine :
 
-À chaque **niveau** de l'arbre, le nombre de noeuds maximal est de $2^{niveau}$, il en découle :
-
 * Pour une **taille n** donnée : $\lfloor log_{2}(n) \rfloor \leq h \leq n-1$
-    * **h** min lorsque **arbre complet**, **h** max lorsque **arbre filiforme**
+    * **h** est **minimale** lorsque **l'arbre est complet (ou parfait)**, **h** est **maximale** lorsque **l'arbre est filiforme**
     * *exemple* si $n=12$ : $3 \leq h \leq 11$
 * Pour une **hauteur h** donnée : $h+1 \leq n \leq 2^{h+1}-1$
-    * **n** min lorsque **arbre filiforme**, **n** max lorsque **arbre parfait**
+    * **n** est **minimale** lorsque **l'arbre est filiforme**, **n** est **maximale** lorsque **l'arbre est parfait**
     * *exemple* si $h=5$ : $6 \leq h \leq 63$
 
 #### Encadrement avec une profondeur 1 pour la racine :
 
-À chaque **niveau** de l'arbre, le nombre de noeuds maximal est de $2^{niveau-1}$, il en découle :
-
 * Pour une **taille n** donnée : $\lceil log_{2}(n+1) \rceil \leq h \leq n$
-    * **h** min lorsque **arbre complet**, **h** max lorsque **arbre filiforme**
+    * **h** est **minimale** lorsque **l'arbre est complet (ou parfait)**, **h** est **maximale** lorsque **l'arbre est filiforme**
     * *exemple* si $n=12$ : $4 \leq h \leq 12$
 * Pour une **hauteur h** donnée : $h \leq n \leq 2^{h}-1$
-    * **n** min lorsque **arbre filiforme**, **n** max lorsque **arbre parfait**
+    * **n** est **minimale** lorsque **l'arbre est filiforme**, **n** est **maximale** lorsque **l'arbre est parfait**
     * *exemple* si $h=5$ : $5 \leq h \leq 31$
