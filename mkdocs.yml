@@ -1,13 +1,17 @@
 site_name: NSI - Arbres
 theme:
   name: material
+  features:
+    - navigation.sections
 site_url: https://erwandemerville.github.io/nsi_arbres/
 nav:
+  - Cours:
     - Définitions et vocabulaire: vocabulaire.md
     - Parcours d'arbres binaires: parcours.md
-    - Fiche d'exercices 1: fiche1_vocabulaire.pdf
-    - Fiche d'exercices 2: fiche2_parcours.pdf
-       
+  - Exercices:
+    - Exercices - Vocabulaire sur les arbres: exercices_vocabulaire.md
+    - Exercices - Parcours d'arbres binaires: fiche2_parcours.pdf
+
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
@@ -20,6 +24,11 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.details
   - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - stylesheets/extra.css
 
 extra_javascript:
   - javascripts/mathjax.js

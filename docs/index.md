@@ -14,7 +14,7 @@ Bienvenue, ce cours se décompose en plusieurs parties :
 
 Voici également des fiches d'exercices *PDF* pour vous entraîner :
 
-* [Exercices - Vocabulaire sur les arbres](fiche1_vocabulaire.pdf)
+* [Exercices - Vocabulaire sur les arbres](exercices_vocabulaire.md)
 
 * [Exercices - Parcours d'un arbre binaire](fiche2_parcours.pdf)
 
