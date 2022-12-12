@@ -15,22 +15,22 @@ Il existe deux façons de parcourir un arbre :
 
 Voici un **arbre binaire** que l'on souhaite **parcourir** :
 
-![images/arbre_parcours_v2.png](images/arbre_parcours_v2.png)
+![images/arbre_parcours_v2.png](images/arbre_parcours_v2.png){ width="55%" }
 
 ## Le parcours en largeur d'abord
 
-Le **parcours en largeur** consiste à **parcourir l'arbre niveau par niveau**. Les **noeuds** de **niveau 0** sont sont d'abord parcouru, puis les **noeuds** de **niveau 1**, et ainsi de suite.<br />
-Dans **chaque niveau**, les **noeuds sont parcourus de gauche à droite**.
+Le **parcours en largeur** consiste à **parcourir l'arbre niveau par niveau**. Le **noeud** de **niveau** (ou *profondeur*) **0** (ou **1** selon la convention choisie pour la *profondeur*), c'est-à-dire le **noeud racine**, est d'abord parcouru, puis les **noeuds** de **niveau 1** (ou **2**), et ainsi de suite.<br />
+À **chaque niveau**, les **noeuds sont parcourus de gauche à droite**.
 
 _Note : On peut parler de parcours en largeur "d'abord", car même si le parcours est d'abord effectué en largeur, l'arbre est bien sûr ensuite visité en profondeur (on visite les noeuds d'un niveau de l'arbre, puis on passe au niveau suivant, etc.)_
 
 Sur l'arbre ci-dessous : `[E, B, G, A, D, F, H, C]`
 
-![images/arbre_parcours_v2.png](images/arbre_parcours_annotel.png)
+![images/arbre_parcours_v2.png](images/arbre_parcours_annotel.png){ width="55%" }
 
 ### Déroulement du parcours en largeur
 
-![images/arbre_parcours_v2.png](images/arbre_parcours_v2.png)
+![images/arbre_parcours_v2.png](images/arbre_parcours_v2.png){ width="55%" }
 
 Initialement, on a deux listes :<br />
 `à visiter = [E]`<br />
@@ -75,7 +75,7 @@ Le **parcours en profondeur** d'un **arbre** est un type de parcours d'arbres qu
 
 Les parcours **préfixe**, **infixe** et **suffixe** (également appelé *postfixe*) se distinguent par l'ordre dans lequel sont effectués ces traitements.
 
-### Parcours préfixe - (Racine-Gauche-Droite)
+### Parcours préfixe - (**Racine**-Gauche-Droite)
 
 Dans le parcours **préfixe**, la **racine** est traitée **avant** les appels récursifs sur le **sous-arbre gauche**, puis sur le **sous-arbre droit**.
 
@@ -83,7 +83,7 @@ Dans le parcours **préfixe**, la **racine** est traitée **avant** les appels r
 
     **Précondition** : L’arbre n’est pas vide<br/>
     Le parcours préfixe se déroule comme suit :
-
+    
     1. On `visite` le **noeud racine** de l’arbre.
     2. On effectue le `parcours préfixe` du **sous-arbre gauche** (s’il est NON vide).
     3. On effectue le `parcours préfixe` du **sous-arbre droit** (s’il est NON vide).
@@ -94,9 +94,9 @@ _Une technique visuelle : En se "baladant" autour de l'arbre (ordre de visite de
 
 Sur l'arbre ci-dessous : `[E, B, A, D, C, G, F, H]`
 
-![images/arbre_parcours_v2.png](images/arbre_parcours_annote.png)
+![images/arbre_parcours_v2.png](images/arbre_parcours_annote.png){ width="55%" }
 
-### Parcours suffixe ou postfixe - (Gauche-Droite-Racine)
+### Parcours suffixe ou postfixe - (Gauche-Droite-**Racine**)
 
 Dans le parcours **suffixe** (ou postfixe), la **racine** est traitée **après** les appels récursifs sur le **sous-arbre gauche** puis sur le **sous-arbre droit**.
 
@@ -104,7 +104,7 @@ Dans le parcours **suffixe** (ou postfixe), la **racine** est traitée **après*
 
     **Précondition** : L’arbre n’est pas vide<br/>
     Le parcours suffixe se déroule comme suit :
-
+    
     1. On effectue le `parcours suffixe` du **sous-arbre gauche** (s’il est NON vide).
     2. On effectue le `parcours suffixe` du **sous-arbre droit** (s’il est NON vide).
     3. On `visite` le **noeud racine** de l’arbre.
@@ -113,7 +113,9 @@ _Une technique visuelle : En se "baladant" autour de l'arbre, on liste chaque no
 
 Sur l'arbre ci-dessous : `[A, C, D, B, F, H, G, E]`
 
-### Parcours infixe - (Gauche-Racine-Droite)
+![images/arbre_parcours_v2.png](images/arbre_parcours_annote.png){ width="55%" }
+
+### Parcours infixe - (Gauche-**Racine**-Droite)
 
 Dans le parcours **infixe**, le traitement de la **racine** est effectué **entre les appels** sur les **sous-arbres gauche** et **droit**.
 
@@ -121,7 +123,7 @@ Dans le parcours **infixe**, le traitement de la **racine** est effectué **entr
 
     **Précondition** : L’arbre n’est pas vide<br/>
     Le parcours infixe se déroule comme suit :
-
+    
     1. On effectue le `parcours infixe` du **sous-arbre gauche** (s’il est NON vide).
     2. On `visite` le **noeud racine** de l’arbre.
     3. On effectue le `parcours infixe` du **sous-arbre droit** (s’il est NON vide).
@@ -130,7 +132,7 @@ _Une technique visuelle : En se "baladant" autour de l'arbre, on liste chaque no
 
 Sur l'arbre ci-dessous : `[A, B, C, D, E, F, G, H]`
 
-![images/arbre_parcours_v2.png](images/arbre_parcours_annote.png)
+![images/arbre_parcours_v2.png](images/arbre_parcours_annote.png){ width="55%" }
 
 ### Autre méthode
 

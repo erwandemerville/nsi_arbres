@@ -6,9 +6,9 @@ Bienvenue, ce cours se décompose en plusieurs parties :
 
 * [Parcours d'arbres binaires](parcours.md)
 
-* Type abstrait "Arbre binaire" (*à venir*)
+* [Type abstrait "Arbre binaire"](type_abstrait.md)
 
-* Implémentation des arbres binaires (*à venir*)
+* [Implémentation des arbres binaires](implementation_arbres.md)
 
 * Les arbres binaires de recherche (*à venir*)
 
@@ -16,7 +16,7 @@ Voici également des fiches d'exercices *PDF* pour vous entraîner :
 
 * [Exercices - Vocabulaire sur les arbres](exercices_vocabulaire.md)
 
-* [Exercices - Parcours d'un arbre binaire](fiche2_parcours.pdf)
+* [Exercices - Parcours d'un arbre binaire](exercices_parcours.md)
 
 ---
 

@@ -8,9 +8,11 @@ nav:
   - Cours:
     - Définitions et vocabulaire: vocabulaire.md
     - Parcours d'arbres binaires: parcours.md
+    - Type abstrait "Arbre binaire": type_abstrait.md
+    - Implémentation d'un arbre binaire: implementation_arbres.md
   - Exercices:
     - Exercices - Vocabulaire sur les arbres: exercices_vocabulaire.md
-    - Exercices - Parcours d'arbres binaires: fiche2_parcours.pdf
+    - Exercices - Parcours d'arbres binaires: exercices_parcours.md
 
 markdown_extensions:
   - pymdownx.arithmatex:

@@ -1,5 +1,5 @@
 !!! info
-	Ces exercices sont également disponibles en format **PDF** : [fiche1_vocabulaire.pdf](fiche1_vocabulaire.pdf)
+	Ces exercices sont également disponibles en format **PDF** : [fiche1_vocabulaire.pdf](fiche1_vocabulaire.pdf){: target="_blank" }
 
 # Exercices - Vocabulaire sur les arbres
 ## Dessiner un arbre
@@ -12,23 +12,23 @@ Sur *Linux*, on peut lister récursivement les répertoires et fichiers du syst�
   <figcaption>Une arborescence sur Linux</figcaption>
 </figure>
 
-!!! note "Question 1"
+!!! note "Exercice 1"
 
 	Dessinez un arbre représentant cette arborescence, en partant de l'arbre suivant :
-    
-    ![Début arbre](images/racine.png){ width="25%" }
-    
-    1. Quelle est la **taille** de cet arbre ?
-    2. Combien y a t-il d'**arêtes** dans l'arbre ?
-    3. Quelles sont les **feuilles** de l'arbre ?
+	
+	![Début arbre](images/racine.png){ width="25%" }
+	
+	1. Quelle est la **taille** de cet arbre ?
+	2. Combien y a t-il d'**arêtes** dans l'arbre ?
+	3. Quelles sont les **feuilles** de l'arbre ?
+	
+	En considérant que la **profondeur** de la **racine** est de **1** :
+	
+	4. Quelle est la **profondeur** du nœud **D5** ?
+	5. Quelle est la **hauteur** de l'arbre ?
+	6. Cet arbre est-il un **arbre binaire** ? Pourquoi ?
 
-    En considérant que la **profondeur** de la **racine** est de **1** :
-
-    4. Quelle est la **profondeur** du nœud **D5** ?
-    5. Quelle est la **hauteur** de l'arbre ?
-    6. Cet arbre est-il un **arbre binaire** ? Pourquoi ?
-
-??? tip "Correction question 1"
+??? tip "Correction exercice 1"
 
 	1. La taille est de **11**, car il y a 11 noeuds dans l'arbre.
 	2. En sachant que **chaque noeud**, à l'exception du **noeud racine**, possède exactement **une arête** le reliant à son **noeud père**, le nombre d'arêtes d'un arbre est toujours $taille - 1$.
@@ -66,40 +66,40 @@ L'arbre (appelé *arbre DOM*) représentant ce code HTML est le suivant :
   <figcaption>Arbre DOM d'une page HTML</figcaption>
 </figure>
 
-!!! note "Question 2"
+!!! note "Exercice 2"
 
 	À votre tour, dessinez l'arbre DOM représentant la page HTML suivante :
+	
+	```html
+	<html>
+	    <head>
+	        <meta charset="utf-8">
+	        <link href="main.css" rel="stylesheet">
+	        <title>Pokémons</title>
+	    </head>
+	    <body>
+	        <section>
+	            <h1>Types des pokémons</h1>
+	            <ul>
+	                <li>FEU</li>
+	                <li>FOUDRE</li>
+	                <li>EAU</li>
+	                <li>HERBE</li>
+	                <li>NORMAL</li>
+	            </ul>
+	        </section>
+	    </body>
+	</html>
+	```
+	
+	1. Quelle est la **taille** de l'arbre obtenu ?
+	2. Quelle est la **hauteur** de l'arbre obtenu :
+	   1. Si la profondeur de la racine est de **0** ?
+	   2. Si la profondeur de la racine est de **1** ?
+	3. Quels **types d'éléments** représentent les **feuilles** de l'arbre ?
+	4. Si les **nœuds** de l'arbre étaient des instances d'une classe `Noeud` caractérisés par une **étiquette** (`html`, `body`, etc) et des **données**, quelles pourraient être ces données ? (voir la balise `meta` ou `link` du code ci-dessus.)
 
-    ```html
-    <html>
-        <head>
-            <meta charset="utf-8">
-            <link href="main.css" rel="stylesheet">
-            <title>Pokémons</title>
-        </head>
-        <body>
-            <section>
-                <h1>Types des pokémons</h1>
-                <ul>
-                    <li>FEU</li>
-                    <li>FOUDRE</li>
-                    <li>EAU</li>
-                    <li>HERBE</li>
-                    <li>NORMAL</li>
-                </ul>
-            </section>
-        </body>
-    </html>
-    ```
-
-    1. Quelle est la **taille** de l'arbre obtenu ?
-    2. Quelle est la **hauteur** de l'arbre obtenu :
-       1. Si la profondeur de la racine est de **0** ?
-       2. Si la profondeur de la racine est de **1** ?
-    3. Quels **types d'éléments** représentent les **feuilles** de l'arbre ?
-    4. Si les **nœuds** de l'arbre étaient des instances d'une classe `Noeud` caractérisés par une **étiquette** (`html`, `body`, etc) et des **données**, quelles pourraient être ces données ? (voir la balise `meta` ou `link` du code ci-dessus.)
-
-??? tip "Correction question 2"
+??? tip "Correction exercice 2"
 
 	Voici l'arbre obtenu à partir de ce code HTML :
 	![Arbre pokémons](images/arbre_pokemon.png)
@@ -115,29 +115,48 @@ L'arbre (appelé *arbre DOM*) représentant ce code HTML est le suivant :
 
 Voici un **arbre binaire** représentant l'expression arithmétique $(6 + 9) / 3$ :
 
-![Arbre d'une expression arithmétique](images/arbre_calcul.png){ width="40%" }
+<figure markdown>
+  ![Arbre d'une expression arithmétique](images/arbre_calcul.png){ width="80%" }
+  <figcaption>Arbre d'une expression arithmétique</figcaption>
+</figure>
 
-!!! note "Question 3"
+!!! note "Exercice 3"
+
     À votre tour, dessinez l'**arbre binaire** correspondant à l'expression $\frac{5*8}{30-(8*3)}$.
-
+    
     1. Pour **quels opérateurs** le positionnement (gauche, droit) des opérandes a une importance ? Pourquoi ?
     2. Quelle est la **taille** de l'arbre obtenu ?
     3. Quelles sont les **feuilles** de l'arbre ? Quelle remarque pouvez-vous faire ?
-
+    
     <br/>
     En considérant que la **profondeur** de la **racine** est de **0** :
+    
+    4. Quelle est la **profondeur** des feuilles **les moins éloignées** de la **racine** ?
+    5. Quelle est la **hauteur** de l'arbre ?
 
-    3. Quelle est la **profondeur** de la feuille **la moins éloignée** de la **racine** ?
-    4. Quelle est la **hauteur** de l'arbre ?
+??? tip "Correction exercice 3"
+
+	Voici l'arbre obtenu :
+	![Arbre d'une expression arithmétique](images/arbre_calcul_corr.png){ width="50%" }
+	
+	1. Il a une importance pour la **soustraction** et la **division**. On n'obtient par exemple pas le même résultat en faisant $30 - 24$ et $24 - 30$. Ici, on a en effet décidé que le **sous-arbre gauche** représentait l'**opérande gauche**, et le **sous-arbre droit** l'**opérande droite**.
+	2. L'arbre obtenu est de taille **9** (car il y a 9 noeuds).
+	3. Les feuilles de cet arbre sont `5`, `8`, `30`, `8` et `3`. Toutes les feuilles de l'arbre contiennent les **valeurs numériques**, tandis que les autres noeuds contiennent les opérateurs.
+	4. Les feuilles de l'arbre les moins éloignées de la racine sont de **profondeur 2** (en prenant **0** comme profondeur pour la racine.)
+	5. La hauteur de cet arbre est de **3**.
 
 ## Encadrement de la hauteur
 
 Pour l'exercice suivant, on considérera que la profondeur de la racine d'un arbre est de **1**.
 Voici deux **arbres binaires** :
 
-![Deux arbres binaires](images/encadrement_arbres.png){ width="60%" }
+<figure markdown>
+  ![Deux arbres binaires](images/encadrement_arbres.png){ width="80%" }
+  <figcaption>Deux arbres binaires</figcaption>
+</figure>
 
-!!! note "Question 4"
+!!! note "Exercice 4"
+
     1. Parmi ces deux arbres, lequel est un arbre **filiforme** ? Un arbre **complet** ?
     2. À quelle autre structure de données s'apparente un **arbre filiforme** ? Pourquoi ?
     3. Quelle est la **taille** de ces deux arbres ?
@@ -145,19 +164,67 @@ Voici deux **arbres binaires** :
     5. Établissez une relation entre la **taille d'un arbre** notée $n$ et la **hauteur de cet arbre** notée $h$, dans le cas où l'arbre est **filiforme**.
     6. 
 		1. Complétez l'arbre **B** de manière à obtenir un **arbre parfait**.
-		2. Combien y a t-il de nœuds de **profondeur 1, 2, 3 et 4** ?
+		2. Combien y a t-il de nœuds de **profondeur 1, 2 et 3**  dans cet **arbre parfait** ? En déduire combien il y aurait de **noeuds** de **profondeur 4** et **5** dans un **arbre parfait de hauteur 5** (vous pouvez dessiner un tableau).
 		3. Établissez une relation entre le **nombre de nœuds** à une **certaine profondeur**, noté $n_{p}$, en fonction de cette **profondeur**, notée $p$.
-		3. En déduire une expression calculant la **taille** $n$ (nombre de **nœuds**) d'un **arbre parfait** en fonction de sa **hauteur** $h$.
-    7. Enfin, proposez un encadrement de la **hauteur d'un arbre** en fonction de la **taille** $n$.
+		4. En déduire une expression calculant la **taille** $n$ (nombre de **nœuds**) d'un **arbre parfait** en fonction de sa **hauteur** $h$.
+    7. Enfin, proposez d'abord un encadrement de la **taille d'un arbre binaire** notée $n$ en fonction de la **hauteur** notée $h$ (en utilisant vos réponses aux questions `5.` et `6.d.`).
+	À partir de l'encadrement précédent, déduire un **encadrement de la hauteur** d'un **arbre binaire** en fonction de sa **taille**.
+
+??? tip "Correction exercice 4"
+
+	1. L'arbre **A** est un **arbre filiforme**. L'arbre **B** est un **arbre complet**.
+	2. Un **arbre filiforme** s'apparente à une **liste chaînée**. En effet, chaque noeud pointe vers **un seul autre noeud** de l'arbre. On verra dans le cours sur les *arbres binaires de recherche* que la *recherche* et l'*insertion* dans un arbre filiforme n'est pas intéressante (car même coût que sur une liste chaînée).
+	3. Ces deux arbres sont de taille $n = 5$.
+	4. Un arbre de taille **5** peut être de **hauteur minimale 3** (arbre **B**) et de **hauteur maximale 5** (arbre **A**) avec une **profondeur 1** pour le **noeud racine**. Les différentes hauteurs possibles sont donc **3**, **4** et **5**.
+	5. Dans le cas où l'arbre est **filiforme**, la **hauteur** d'un arbre est égale à son **nombre de noeuds** (= sa **taille**). On peut donc écrire que $n = h$.
+	6. a. Voici l'arbre obtenu (il suffit d'ajouter deux noeuds dans le niveau le plus bas de l'arbre pour que celui-ci soit rempli et que l'arbre devienne un **arbre parfait**) :<br />
+	![Arbre parfait](images/encadrement_arbres_corr.png){ width="40%" }<br />
+	b. En notant $p$ la profondeur et $n_{p}$ le **nombre de noeuds** de profondeur $p$ :<br />
+	![Taille en fonction de profondeur](images/tableau_tailleprof.png){ width="26%" }<br />
+	c. Du tableau précédent, on peut déduire la relation $n_{p} = 2^{p-1}$.<br />
+    d. Finalement, la **taille** notée $n$ d'un **arbre parfait** en fonction de sa **hauteur** notée $h$ peut se calculer de la manière suivante :<br />
+    $n = 2^{0} + 2^{1} + [...] + 2^{h-1} = 2^{h} - 1$
+    
+    7. On a précédemment déterminé la **taille minimale** d'un arbre binaire en fonction de sa **hauteur** :<br />
+    $n_{min} = h$ (cas de l'**arbre filiforme**)<br />
+    On a également determiné la **taille maximale** d'un arbre binaire en fonction de sa **hauteur** :<br />
+    $n_{max} = 2^{h} - 1$ (cas de l'**arbre parfait**)<br />
+    On peut donc en déduire un **encadrement de la taille** d'un **arbre binaire** de façon générale, avec pour **profondeur racine 1** :<br />
+    $n_{min} \leq n \leq n_{max}$<br />
+    $h \leq n \leq 2^{h} - 1$<br /><br />
+    À partir de l'encadrement précédent, on peut retrouver l'**encadrement de la hauteur** $h$ :
+    $\lceil log_{2}(n+1) \rceil \leq h \leq n$
 
 ## Dénombrement d'arbres binaires
 
-!!! note "Question 5"
+!!! note "Exercice 5"
     Dessinez et dénombrez tous les **arbres binaires** possibles :
 
     * pour une taille $n = 1$,
     * pour une taille $n = 2$,
     * pour une taille $n = 3$,
     * pour une taille $n = 4$
-
+    
     Sans les dessiner et en vous aidant des réponses précédentes, déterminez le **nombre d'arbres** de taille $n = 5$.
+    
+??? tip "Indice 1 exercice 5"
+
+	Vous pouvez dénombrer les arbres de **taille** $n = 5$ en faisant la **somme des arbres** dont les **noeuds** sont répartis de la manière suivante :
+
+	* *1 noeud racine* et *4 noeuds à droite*
+	* *1 noeud racine* et *4 noeuds à gauche*
+	* *1 noeud racine*, *3 noeuds à gauche* et *1 noeud à droite*
+	* *1 noeud racine*, *1 noeud à gauche* et *3 noeud à droite*
+	* *1 noeud racine*, *2 noeuds à gauche* et *2 noeuds à droite*
+
+	![Répartition noeuds](images/indice_denombrement.png)
+	
+	En comptant le nombre de possibilités pour ces 5 cas, vous obtiendrez le nombre total d'arbres de taille $n = 5$.
+	
+??? tip "Indice 2 exercice 5"
+
+	Le nombre d'arbres d'une taille $n$ donnée peut être calculé avec le **nombre de Catalan**, voir [page Wikipedia](https://fr.wikipedia.org/wiki/Nombre_de_Catalan){: target="_blank" } pour plus d'informations. (Bien sûr, ce n'est pas au programme.)
+	
+	Donc, pour une taille $n = 5$ : $C_{5} = \frac{(2n)!}{(n+1)!n!} = \frac{10!}{6!*5!} = \frac{5040}{120} = 42$
+	
+	Il y a donc **42 arbres de taille 5**.
