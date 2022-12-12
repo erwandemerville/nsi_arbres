@@ -18,20 +18,14 @@ On rappelle qu'un **arbre binaire** est **soit** :
 
 	**Utilise :** *Noeud*, *Element*, *Bool*<br />
 	**Opérations :**<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $nvABV :~\rightarrow Arbre$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $nvAB :~Noeud \times Arbre \times Arbre \rightarrow  Arbre$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $racine :~Arbre \rightarrow Noeud$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $gauche :~Arbre \rightarrow Arbre$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $droite :~Arbre \rightarrow Arbre$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $contenu :~Noeud \rightarrow Element$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $est\_vide :~Arbre \rightarrow Bool$<br />
-    **Préconditions** ($a$ : *Arbre*) :<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $racine(a)$ **est défini si et seulement si** $\neg est\_vide(a)$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $gauche(a)$ **est défini si et seulement si** $\neg est\_vide(a)$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $droite(a)$ **est défini si et seulement si** $\neg est\_vide(a)$<br />
-    **Axiomes** ($g$,$d$ : *Arbre*; $r$ : *Noeud*) :<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $racine(nvAB(r,g,d)) = r$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $gauche(cons(r,g,d)) = g$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $droite(cons(r,g,d)) = d$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $est\_vide(nvABV) = vrai$<br />
-    &nbsp;&nbsp;&nbsp;&nbsp; $est\_vide(nvAB(r,g,d)) = faux$<br />
+	&nbsp;&nbsp;&nbsp;&nbsp; $nvABV :~\rightarrow Arbre$<br />
+	&nbsp;&nbsp;&nbsp;&nbsp; $nvAB :~Noeud \times Arbre \times Arbre \rightarrow  Arbre$<br />
+	&nbsp;&nbsp;&nbsp;&nbsp; $racine :~Arbre \rightarrow Noeud$<br />
+	&nbsp;&nbsp;&nbsp;&nbsp; $gauche :~Arbre \rightarrow Arbre$<br />
+	&nbsp;&nbsp;&nbsp;&nbsp; $droite :~Arbre \rightarrow Arbre$<br />
+	&nbsp;&nbsp;&nbsp;&nbsp; $contenu :~Noeud \rightarrow Element$<br />
+	&nbsp;&nbsp;&nbsp;&nbsp; $est\_vide :~Arbre \rightarrow Bool$<br />
+	**Préconditions** ($a$ : *Arbre*) :<br />
+	&nbsp;&nbsp;&nbsp;&nbsp; $racine(a)$ **est défini si et seulement si** $\neg est\_vide(a)$<br />
+	&nbsp;&nbsp;&nbsp;&nbsp; $gauche(a)$ **est défini si et seulement si** $\neg est\_vide(a)$<br />
+	&nbsp;&nbsp;&nbsp;&nbsp; $droite(a)$ **est défini si et seulement si** $\neg est\_vide(a)$
