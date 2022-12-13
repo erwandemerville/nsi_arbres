@@ -71,62 +71,115 @@ class Arbre:
 def taille(a: Arbre) -> int:
     ''' Renvoie la taille d'un arbre. '''
     
-    pass
+    if a.est_vide():
+        return 0
+    else:
+        return 1 + taille(a.gauche()) + taille(a.droite())
 
 def hauteur(a: Arbre) -> int:
     ''' Renvoie la hauteur d'un arbre. '''
     
-    pass
+    if a.est_vide():
+        return -1
+    else:
+        return 1 + max(hauteur(a.gauche()), hauteur(a.droite()))
 
 def nb_feuilles(a: Arbre) -> int:
     ''' Renvoie le nombre de feuilles que contient un arbre NON VIDE. '''
     
-    pass
+    if a.est_vide():
+        return 0
+    elif a.est_feuille():
+        return 1
+    else:
+        return nb_feuilles(a.gauche()) + nb_feuilles(a.droite())
 
 def est_present(a: Arbre, el: int|str) -> bool:
     ''' Renvoie True si un noeud contenant l'élément el est présent dans l'arbre, False sinon. '''
     
-    pass
+    if a.est_vide():
+        return False
+    elif a.valeur_racine() == el:
+        return True
+    else:
+        return est_present(a.gauche()) or est_present(a.droite())
 
 # Fonctions de parcours d'arbres
 
 def parcours_prefixe(a: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre préfixe. '''
     
-    pass
+    print(a.valeur_racine())
+    if not a.gauche().est_vide():
+        parcours_prefixe(a.gauche())
+    if not a.droite().est_vide():
+        parcours_prefixe(a.droite())
         
 def parcours_prefixe_l(a: Arbre) -> list:
     ''' Renvoie une liste des valeurs des noeuds de l'arbre parcourus en ordre préfixe. '''
     
-    pass
+    res = [a.valeur_racine()]
+    if not a.gauche().est_vide():
+        res += parcours_prefixe_l(a.gauche())
+    if not a.droite().est_vide():
+        res += parcours_prefixe_l(a.droite())
+    return res
 
 def parcours_suffixe(a: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre suffixe. '''
     
-    pass
+    if not a.gauche().est_vide():
+        parcours_suffixe(a.gauche())
+    if not a.droite().est_vide():
+        parcours_suffixe(a.droite())
+    print(a.valeur_racine())
     
 def parcours_suffixe_l(a: Arbre) -> list:
     ''' Renvoie une liste des valeurs des noeuds de l'arbre parcourus en ordre suffixe. '''
     
-    pass
+    res = []
+    if not a.gauche().est_vide():
+        res += parcours_suffixe_l(a.gauche())
+    if not a.droite().est_vide():
+        res += parcours_suffixe_l(a.droite())
+    res += [a.valeur_racine()]
+    return res
 
 def parcours_infixe(a: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre infixe. '''
     
-    pass
+    if not a.gauche().est_vide():
+        parcours_infixe(a.gauche())
+    print(a.valeur_racine())
+    if not a.droite().est_vide():
+        parcours_infixe(a.droite())
         
 def parcours_infixe_l(a: Arbre) -> list:
     ''' Renvoie une liste des valeurs des noeuds de l'arbre parcourus en ordre infixe. '''
     
-    pass
+    res = []
+    if not a.gauche().est_vide():
+        res = parcours_infixe_l(a.gauche())
+    res += [a.valeur_racine()]
+    if not a.droite().est_vide():
+        res += parcours_infixe_l(a.droite())
+    return res
 
 def parcours_en_largeur(a: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en largeur.
     :CU: L'arbre a est NON VIDE '''
     
-    pass
+    file = []
+    file.append(a.racine())
+    while len(file) != 0:
+        n = file.pop(0)
+        print(n.valeur_racine())
+        if not n.gauche().est_vide():
+            file.append(n.gauche())
+        if not n.droite().est_vide():
+            file.append(n.droite())
     
 if __name__ == '__main__':
     ''' Instructions exécutées si l'on exécute ce fichier directement '''
     
-    pass
+    a = Arbre('C', Arbre('A', Arbre(), Arbre('H', Arbre('D', Arbre(), Arbre()), Arbre('F', Arbre(), Arbre()))), Arbre('B', Arbre('G', Arbre(), Arbre()), Arbre('E', Arbre(), Arbre())))

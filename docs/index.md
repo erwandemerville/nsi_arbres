@@ -18,6 +18,8 @@ Voici également des fiches d'exercices *PDF* pour vous entraîner :
 
 * [Exercices - Parcours d'un arbre binaire](exercices_parcours.md)
 
+* [Exercices - Implémentations d'arbres binaires](implementations_arbres.md)
+
 ---
 
 *Demerville Erwan*
