@@ -15,8 +15,8 @@ On aura donc **un seul constucteur** pouvant être appelé de **deux façons dif
 !!! success "À télécharger"
     Récupérez les deux fichiers suivants :
     
-    * [arbre_binaire.py](arbre_binaire.py){: target="_blank" } - Classe `Arbre` à compléter représentant un **arbre binaire**
-    * [dessin.py](dessin.py){: target="_blank" } - Quelques fonctions annexes utilisées pour dessiner un arbre avec le module `Graphviz`. (Vous n'avez pas besoin d'ouvrir ou de modifier ce fichier.)
+    * [arbre_binaire.py](src/arbre_binaire.py){: target="_blank" } - Classe `Arbre` à compléter représentant un **arbre binaire**
+    * [dessin.py](src/dessin.py){: target="_blank" } - Quelques fonctions annexes utilisées pour dessiner un arbre avec le module `Graphviz`. (Vous n'avez pas besoin d'ouvrir ou de modifier ce fichier.)
 
 ## Méthodes de la classe
 
@@ -188,7 +188,7 @@ Enfin, pour **dessiner** cet arbre, on peut utiliser la fonction **dessiner** im
 	Pour utiliser la fonction `dessiner`, le module `Graphviz` doit être installé sur votre machine. Si ce n'est pas le cas, vous pouvez l'installer facilement de la manière suivante :
 
 	Dans **Thonny**, allez dans l'onglet "Outils", puis "Gérer les paquets". Recherchez "graphviz", puis cliquez sur le bouton ***Installer***.
-	
+
 Si l'on souhaite accéder par exemple au **noeud ayant pour valeur B**, qui est équivalent à l'**arbre** dont `valeur_racine() == 'B'`, on utilisera l'instruction :
 
 ```python
@@ -210,7 +210,7 @@ ou simplement
 	ou simplement
 	
 	```python
-        a.gauche().droite().gauche()
+	    a.gauche().droite().gauche()
 	```
 
 ## Quelques mesures sur les arbres
@@ -223,6 +223,7 @@ Pour écrire ces fonctions de manière **récursive**, vous devez toujours disti
 * le ou les **cas de base** (conditions d'arrêt), qui peuvent être par exemple le cas où l'**arbre est vide**, et/ou le cas où l'**arbre est une feuille**...
 * un **cas général**...
 	
+
 !!! note "À faire"
 	Complétez les fonctions `taille`, `hauteur`, `nb_feuilles` et `est_present`. Ces fonctions doivent être écrites de manière **récursive**.
 	
