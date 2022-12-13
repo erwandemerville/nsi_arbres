@@ -13,10 +13,39 @@ On aura donc **un seul constucteur** pouvant être appelé de **deux façons dif
 *Note* : Une **feuille** est donc une instance  de `Arbre` dont le **sous-arbre gauche** et le **sous-arbre droit** sont des **arbres vides**.
 
 !!! success "À télécharger"
-    Récupérez les deux fichiers suivants :
-    
-    * [arbre_binaire.py](src/arbre_binaire.py){: target="_blank" } - Classe `Arbre` à compléter représentant un **arbre binaire**
+    Récupérez les fichiers suivants :
+
+    * [arbre_binaire.py](src/arbre_binaire.py){: target="_blank" } - Classe `Arbre` à compléter représentant un **arbre binaire**.
     * [dessin.py](src/dessin.py){: target="_blank" } - Quelques fonctions annexes utilisées pour dessiner un arbre avec le module `Graphviz`. (Vous n'avez pas besoin d'ouvrir ou de modifier ce fichier.)
+
+	Si vous utilisez les **machines du *lycée***:
+
+	* [windows_graphviz.zip](src/windows_graphviz.zip){: target="_blank" } - Décompressez l'archive **dans le répertoire où se trouvent vos fichiers Python**. Vous devez avoir `arbre_binaire.py`, `dessin.py` et un dossier `Graphviz` au même endroit.<br />Contient les exécutables de *Graphviz*.
+
+??? note "Installation de *Graphviz* sur votre machine personnelle"
+	Pour utiliser la fonction `dessiner`, le module `Graphviz` et les exécutables associés doivent être installés sur votre machine. Voici comment procéder.
+	
+	<u>**Étape 1**</u> - **Installer le module Graphviz**
+
+	**Méthode 1** :
+	
+	Dans **Thonny**, allez dans l'onglet "Outils", puis "Gérer les paquets". Recherchez "graphviz", puis cliquez sur le bouton ***Installer***.
+	
+	**Méthode 2** :
+	
+	Ouvrez l'**invite de commande Windows** (ou le *terminal* si vous utilisez *Linux*), puis exécutez simplement la commande suivante :
+	
+	```
+	pip install graphviz
+	```
+	
+	<u>**Étape 2**</u> - **Installer les exécutables**
+	
+	Si vous êtes sur **Windows**, [cliquez ici](https://graphviz.org/download/#windows){: target="_blank" } puis **téléchargez et installez** la **dernière version** de *Graphviz* (choisissez l'`EXE Installer` correspondant à la version de votre système d'exploitation, *32 bits* ou *64 bits*. Si vous avez un doute, choisissez la version *32 bits* ou lisez [cet article](https://lecrabeinfo.net/32-ou-64-bits-comment-savoir.html#windows-32-bits-ou-64-bits){: target="_blank" } pour connaître la version de votre système.)
+	
+	Si vous êtes sur **Linux**, [cliquez ici](https://graphviz.org/download/#linux){: target="_blank" } puis installez le paquet `graphviz` en exécutant dans le *terminal* la commande associée à votre distribution (*Ubuntu*, *Fedora*, etc.).
+	
+	Si vous êtes sur **macOS**, [cliquez ici](https://graphviz.org/download/#mac){: target="_blank" } puis exécutez l'une des commandes indiquées.
 
 ## Méthodes de la classe
 
@@ -184,11 +213,6 @@ Enfin, pour **dessiner** cet arbre, on peut utiliser la fonction **dessiner** im
 	dessiner(a)
 ```
 
-??? note "Note concernant le module *Graphviz*"
-	Pour utiliser la fonction `dessiner`, le module `Graphviz` doit être installé sur votre machine. Si ce n'est pas le cas, vous pouvez l'installer facilement de la manière suivante :
-
-	Dans **Thonny**, allez dans l'onglet "Outils", puis "Gérer les paquets". Recherchez "graphviz", puis cliquez sur le bouton ***Installer***.
-
 Si l'on souhaite accéder par exemple au **noeud ayant pour valeur B**, qui est équivalent à l'**arbre** dont `valeur_racine() == 'B'`, on utilisera l'instruction :
 
 ```python
@@ -198,6 +222,12 @@ ou simplement
 
 ```python
 	a.droite()
+```
+
+et si on veut récupérer la **valeur** de ce **noeud** :
+
+```python
+	a.droite().valeur_racine()
 ```
 
 !!! note "À faire"
@@ -212,6 +242,12 @@ ou simplement
 	```python
 	    a.gauche().droite().gauche()
 	```
+	
+	et pour récupérer la **valeur** qu'elle contient :
+	
+	```python
+	    a.gauche().droite().gauche().valeur_racine()
+	```
 
 ## Quelques mesures sur les arbres
 
@@ -220,8 +256,8 @@ ou simplement
 	
 Pour écrire ces fonctions de manière **récursive**, vous devez toujours distinguer :
 
-* le ou les **cas de base** (conditions d'arrêt), qui peuvent être par exemple le cas où l'**arbre est vide**, et/ou le cas où l'**arbre est une feuille**...
-* un **cas général**...
+* le ou les **cas de base** (condition(s) d'arrêt), qui peuvent être par exemple le cas où l'**arbre est vide**, et/ou le cas où l'**arbre est une feuille**...
+* un **cas général**, c'est dans ce cas que la récursivité se fait.
 	
 
 !!! note "À faire"

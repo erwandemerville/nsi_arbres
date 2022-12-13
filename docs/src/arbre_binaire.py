@@ -79,11 +79,11 @@ def hauteur(a: Arbre) -> int:
     pass
 
 def nb_feuilles(a: Arbre) -> int:
-    ''' Renvoie le nombre de feuilles que contient un arbre NON VIDE. '''
+    ''' Renvoie le nombre de feuilles que contient un arbre binaire. '''
     
     pass
 
-def est_present(a: Arbre, el: int|str) -> bool:
+def est_present(a: Arbre, el: 'int|str') -> bool:
     ''' Renvoie True si un noeud contenant l'élément el est présent dans l'arbre, False sinon. '''
     
     pass
@@ -94,29 +94,14 @@ def parcours_prefixe(a: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre préfixe. '''
     
     pass
-        
-def parcours_prefixe_l(a: Arbre) -> list:
-    ''' Renvoie une liste des valeurs des noeuds de l'arbre parcourus en ordre préfixe. '''
-    
-    pass
 
 def parcours_suffixe(a: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre suffixe. '''
     
     pass
-    
-def parcours_suffixe_l(a: Arbre) -> list:
-    ''' Renvoie une liste des valeurs des noeuds de l'arbre parcourus en ordre suffixe. '''
-    
-    pass
 
 def parcours_infixe(a: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre infixe. '''
-    
-    pass
-        
-def parcours_infixe_l(a: Arbre) -> list:
-    ''' Renvoie une liste des valeurs des noeuds de l'arbre parcourus en ordre infixe. '''
     
     pass
 
@@ -125,7 +110,8 @@ def parcours_en_largeur(a: Arbre) -> None:
     :CU: L'arbre a est NON VIDE '''
     
     pass
-    
+
+
 if __name__ == '__main__':
     ''' Instructions exécutées si l'on exécute ce fichier directement '''
     

@@ -1,2 +1,5 @@
 # Ignorer répertoire du site généré par mkdocs
 site/
+
+# Ignorer fichiers Python utilisés dans le cadre des cours
+docs/src/pour_cours/

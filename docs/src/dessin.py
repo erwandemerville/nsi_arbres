@@ -1,5 +1,9 @@
 import time
 import graphviz
+import os
+
+if os.path.isdir('Graphviz/bin'):
+    os.chdir("Graphviz/bin")
 
 WHITE = '#FFFFFF'
 BLACK = '#000000'
@@ -65,4 +69,3 @@ def dessiner(arbre, filename='arbre.dot', background_color=WHITE):
     le second contenant l'image au format PNG.
     '''
     graphviz.Source(en_dot(arbre, background_color=background_color), format='png').view(filename=filename)
-
