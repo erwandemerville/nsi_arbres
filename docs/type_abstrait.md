@@ -1,6 +1,3 @@
-!!! warning "Important"
-	Cette partie est encore en construction, de nouvelles informations pourront y être ajoutées prochainement.
-
 # Type abstrait Arbre binaire
 
 Nous avons vu ce qu'était un **arbre binaire**, ainsi que le vocabulaire général et les différentes mesures sur les arbres.

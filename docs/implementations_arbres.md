@@ -1,5 +1,5 @@
 !!! warning "Important"
-	Cette section est en cours de construction. De nouvelles informations ainsi que les corrections des sujets proposés y seront ajoutées prochainement.
+	Cette section est en cours de construction. De nouveaux sujets ainsi que les corrections des sujets proposés y seront ajoutés prochainement.
 
 # Sujets de bac sur les arbres
 
@@ -7,7 +7,7 @@
 
 Voici quelques sujets pour vous entraîner sur les arbres binaires :
 
-### Implémentation avec un dictionnaire
+### Implémentations avec un dictionnaire
 
 * [Extrait J1G11](sujets_bac/extrait_J1G11.pdf){: target="_blank" }
 * [Extrait J1AS1](sujets_bac/extrait_J1AS1.pdf){: target="_blank" }
