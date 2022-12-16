@@ -17,16 +17,16 @@ On aura donc **un seul constucteur** pouvant être appelé de **deux façons dif
 
     * [arbre_binaire.py](src/arbre_binaire.py){: target="_blank" } - Classe `Arbre` à compléter représentant un **arbre binaire**.
     * [dessin.py](src/dessin.py){: target="_blank" } - Quelques fonctions annexes utilisées pour dessiner un arbre avec le module `Graphviz`. (Vous n'avez pas besoin d'ouvrir ou de modifier ce fichier.)
-
-	Si vous utilisez les **machines du *lycée***:
-
-	* [windows_graphviz.zip](src/windows_graphviz.zip){: target="_blank" } - Décompressez l'archive **dans le répertoire où se trouvent vos fichiers Python**. Vous devez avoir `arbre_binaire.py`, `dessin.py` et un dossier `Graphviz` au même endroit.<br />Contient les exécutables de *Graphviz*.
+    
+    Si vous utilisez les **machines du *lycée***:
+    
+    * [windows_graphviz.zip](src/windows_graphviz.zip){: target="_blank" } - Décompressez l'archive **dans le répertoire où se trouvent vos fichiers Python**. Vous devez avoir `arbre_binaire.py`, `dessin.py` et un dossier `Graphviz` au même endroit.<br />Contient les exécutables de *Graphviz*.
 
 ??? note "Installation de *Graphviz* sur votre machine personnelle"
 	Pour utiliser la fonction `dessiner`, le module `Graphviz` et les exécutables associés doivent être installés sur votre machine. Voici comment procéder.
 	
 	<u>**Étape 1**</u> - **Installer le module Graphviz**
-
+	
 	**Méthode 1** :
 	
 	Dans **Thonny**, allez dans l'onglet "Outils", puis "Gérer les paquets". Recherchez "graphviz", puis cliquez sur le bouton ***Installer***.
@@ -253,16 +253,28 @@ et si on veut récupérer la **valeur** de ce **noeud** :
 
 !!! warning "Important"
 	Pour les mesures suivantes, on considèrera que la **profondeur du noeud racine** est de **0**. Ainsi, on considèrera que la **hauteur** de l'**arbre vide** est de **-1**. Il s'agit d'un choix arbitraire, on aurait très bien pu choisir une profondeur de 1 pour le noeud racine (auquel cas l'arbre vide serait de hauteur 0).
-	
-Pour écrire ces fonctions de manière **récursive**, vous devez toujours distinguer :
 
-* le ou les **cas de base** (condition(s) d'arrêt), qui peuvent être par exemple le cas où l'**arbre est vide**, et/ou le cas où l'**arbre est une feuille**...
-* un **cas général**, c'est dans ce cas que la récursivité se fait.
-	
+On rappelle que pour écrire des fonctions de manière **récursive**, vous devez toujours distinguer :
+
+* au moins un **cas de base** (condition d'arrêt), qui ici peut être par exemple le cas où l'**arbre est vide** ou encore le cas où l'**arbre est une feuille**. Un cas de base est un cas **non récursif**, pour lequel la valeur renvoyée par la fonction est directement définie.
+* au moins un **cas général**, ou **cas récursif**, c'est-à-dire un cas dans lequel la fonction est appelée récursivement et où le résultat renvoyé est calculé en utilisant le résultat du (ou des) appel(s) récursif(s). À chaque appel récursif, la valeur d'au moins un des
+paramètres de la fonction doit changer, de manière à **converger vers le cas de base**.
 
 !!! note "À faire"
 	Complétez les fonctions `taille`, `hauteur`, `nb_feuilles` et `est_present`. Ces fonctions doivent être écrites de manière **récursive**.
+
+??? question "Indice pour la fonction `taille`"
+	Pour écrire cette fonction, qui doit fonctionner autant sur un **arbre vide** que sur un **arbre non vide**, il convient d'abord de déterminer un **cas de base**, c'est-à-dire un cas **non récursif** de manière à ce que l'algorithme s'arrête à un moment donné.<br />
+	Sur quel type d'arbres la fonction `taille` renverra **toujours la même valeur** ?
 	
+	- Si l'on cherche la **taille** d'un **arbre vide**, on obtiendra **toujours 0** car un arbre vide ne contient **pas de noeuds**. C'est donc là notre **cas de base**.
+
+	Ensuite, il faut détermine un cas général, c'est-à-dire un cas où l'on effectue un ou plusieurs appels récursifs à `taille`.
+	
+	- Si l'on cherche la *taille* d'un **arbre non vide**, c'est-à-dire d'un arbre constitué d'un **noeud racine**, d'un **sous-arbre gauche** et d'un **sous-arbre droit**, on peut alors établir que la **taille de l'arbre** correspond à *1 (on compte le noeud racine) + la taille du sous-arbre gauche + la taille du sous-arbre droit*.<br />Au fur et à mesure des appels récursifs, on convergera vers le cas où l'arbre est vide, et donc la fonction finira par se terminer.
+
+	Maintenant que l'on a déterminé ces deux cas en français, il ne reste plus qu'à les retranscrire en Python.
+
 ??? tip "Solution"
 	À venir...
 
