@@ -275,8 +275,56 @@ paramètres de la fonction doit changer, de manière à **converger vers le cas 
 
 	Maintenant que l'on a déterminé ces deux cas en français, il ne reste plus qu'à les retranscrire en Python.
 
-??? tip "Solution"
-	À venir...
+??? question "Indice pour la fonction `hauteur`"
+    Cette fonction est assez proche de la fonction `taille`.
+    On doit pouvoir déterminer la **hauteur** d'un arbre vide ou non.
+
+    La **profondeur du noeud racine** est de **0**.
+
+    - On considèrera que la **hauteur d'un arbre vide** est **toujours** de **-1**, ce sera donc le **cas de base**.
+    - Pour le **cas général** (arbre *non vide*), il faut compter la **racine**, donc ajouter **1** à la hauteur de l'arbre, puis y ajouter **la plus grande hauteur entre celle du sous-arbre gauche et celle du sous-arbre droit** (appels récursifs).
+    
+    *Note* : La fonction Python `max` permet de déterminer la plus grande valeur entière parmi plusieurs valeurs.
+
+??? tip "Solutions"
+	```python
+    def taille(a: Arbre) -> int:
+    ''' Renvoie la taille d'un arbre. '''
+    
+    if a.est_vide():
+        return 0
+    else:
+        return 1 + taille(a.gauche()) + taille(a.droite())
+
+    
+    def hauteur(a: Arbre) -> int:
+        ''' Renvoie la hauteur d'un arbre. '''
+        
+        if a.est_vide():
+            return -1
+        else:
+            return 1 + max(hauteur(a.gauche()), hauteur(a.droite()))
+
+    def nb_feuilles(a: Arbre) -> int:
+        ''' Renvoie le nombre de feuilles que contient un arbre binaire. '''
+        
+        if a.est_vide():
+            return 0
+        elif a.est_feuille():
+            return 1
+        else:
+            return nb_feuilles(a.gauche()) + nb_feuilles(a.droite())
+
+    def est_present(a: Arbre, el: int|str) -> bool:
+        ''' Renvoie True si un noeud contenant l'élément el est présent dans l'arbre, False sinon. '''
+        
+        if a.est_vide():
+            return False
+        elif a.valeur_racine() == el:
+            return True
+        else:
+            return est_present(a.gauche()) or est_present(a.droite())
+    ```
 
 ## Parcours d'arbres
 
