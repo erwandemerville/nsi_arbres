@@ -13,7 +13,10 @@ nav:
   - Exercices:
     - Exercices - Vocabulaire sur les arbres: exercices_vocabulaire.md
     - Exercices - Parcours d'arbres binaires: exercices_parcours.md
-    - Exercices - Implémentations d'arbres binaires: implementations_arbres.md
+    - Exercices - Arbre binaires de recherche: exercices_abr.md
+    - Exercices - Implémentations d'arbres binaires et ABR: implementations_arbres.md
+  - Évaluations:
+    - Évaluation 1 corrigée: evaluation_correction.pdf
 
 markdown_extensions:
   - pymdownx.arithmatex:

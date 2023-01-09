@@ -170,7 +170,7 @@ Essayons de créer l'arbre suivant en utilisant notre classe `Arbre` :
 Voici une instruction permettant de **créer cet arbre** à l'aide de notre classe `Arbre` et de le stocker dans une variable `a` :
 
 ```python
-    a = Arbre('C',
+    ab = Arbre('C',
               Arbre('A',
                     Arbre(),
                     Arbre('H',
@@ -188,7 +188,7 @@ Voici une instruction permettant de **créer cet arbre** à l'aide de notre clas
 Bien sûr, on aurait pu l'écrire sur une seule ligne :
 
 ```python
-    a = Arbre('C', Arbre('A', Arbre(), Arbre('H', Arbre('D', Arbre(), Arbre()), Arbre('F', Arbre(), Arbre()))), Arbre('B', Arbre('G', Arbre(), Arbre()), Arbre('E', Arbre(), Arbre())))
+    ab = Arbre('C', Arbre('A', Arbre(), Arbre('H', Arbre('D', Arbre(), Arbre()), Arbre('F', Arbre(), Arbre()))), Arbre('B', Arbre('G', Arbre(), Arbre()), Arbre('E', Arbre(), Arbre())))
 ```
 
 On aurait également pu créer plusieurs variables de manière à décomposer l'**arbre** :
@@ -204,30 +204,30 @@ On aurait également pu créer plusieurs variables de manière à décomposer l'
     sab = Arbre('B', fg, fe)
     saa = Arbre('A', Arbre(), sah)
     # Création de l'arbre final
-    a = Arbre('C', saa, sab)
+    ab = Arbre('C', saa, sab)
 ```
 
 Enfin, pour **dessiner** cet arbre, on peut utiliser la fonction **dessiner** importée depuis `dessin.py` :
 
 ```python
-	dessiner(a)
+	dessiner(ab)
 ```
 
 Si l'on souhaite accéder par exemple au **noeud ayant pour valeur B**, qui est équivalent à l'**arbre** dont `valeur_racine() == 'B'`, on utilisera l'instruction :
 
 ```python
-	a.droite().racine()
+	ab.droite().racine()
 ```
 ou simplement
 
 ```python
-	a.droite()
+	ab.droite()
 ```
 
 et si on veut récupérer la **valeur** de ce **noeud** :
 
 ```python
-	a.droite().valeur_racine()
+	ab.droite().valeur_racine()
 ```
 
 !!! note "À faire"
@@ -235,18 +235,18 @@ et si on veut récupérer la **valeur** de ce **noeud** :
 	
 ??? tip "Solution"
 	```python
-        a.gauche().droite().gauche().racine()
+        ab.gauche().droite().gauche().racine()
 	```
 	ou simplement
 	
 	```python
-	    a.gauche().droite().gauche()
+	    ab.gauche().droite().gauche()
 	```
 	
 	et pour récupérer la **valeur** qu'elle contient :
 	
 	```python
-	    a.gauche().droite().gauche().valeur_racine()
+	    ab.gauche().droite().gauche().valeur_racine()
 	```
 
 ## Quelques mesures sur les arbres
@@ -268,11 +268,11 @@ paramètres de la fonction doit changer, de manière à **converger vers le cas 
 	Sur quel type d'arbres la fonction `taille` renverra **toujours la même valeur** ?
 	
 	- Si l'on cherche la **taille** d'un **arbre vide**, on obtiendra **toujours 0** car un arbre vide ne contient **pas de noeuds**. C'est donc là notre **cas de base**.
-
+	
 	Ensuite, il faut détermine un cas général, c'est-à-dire un cas où l'on effectue un ou plusieurs appels récursifs à `taille`.
 	
 	- Si l'on cherche la *taille* d'un **arbre non vide**, c'est-à-dire d'un arbre constitué d'un **noeud racine**, d'un **sous-arbre gauche** et d'un **sous-arbre droit**, on peut alors établir que la **taille de l'arbre** correspond à *1 (on compte le noeud racine) + la taille du sous-arbre gauche + la taille du sous-arbre droit*.<br />Au fur et à mesure des appels récursifs, on convergera vers le cas où l'arbre est vide, et donc la fonction finira par se terminer.
-
+	
 	Maintenant que l'on a déterminé ces deux cas en français, il ne reste plus qu'à les retranscrire en Python.
 
 ??? question "Indice pour la fonction `hauteur`"
@@ -280,7 +280,7 @@ paramètres de la fonction doit changer, de manière à **converger vers le cas 
     On doit pouvoir déterminer la **hauteur** d'un arbre vide ou non.
 
     La **profondeur du noeud racine** est de **0**.
-
+    
     - On considèrera que la **hauteur d'un arbre vide** est **toujours** de **-1**, ce sera donc le **cas de base**.
     - Pour le **cas général** (arbre *non vide*), il faut compter la **racine**, donc ajouter **1** à la hauteur de l'arbre, puis y ajouter **la plus grande hauteur entre celle du sous-arbre gauche et celle du sous-arbre droit** (appels récursifs).
     
@@ -288,42 +288,41 @@ paramètres de la fonction doit changer, de manière à **converger vers le cas 
 
 ??? tip "Solutions"
 	```python
-    def taille(a: Arbre) -> int:
+    def taille(ab: Arbre) -> int:
     ''' Renvoie la taille d'un arbre. '''
     
-    if a.est_vide():
+    if ab.est_vide():
         return 0
     else:
-        return 1 + taille(a.gauche()) + taille(a.droite())
+        return 1 + taille(ab.gauche()) + taille(ab.droite())
 
-    
-    def hauteur(a: Arbre) -> int:
-        ''' Renvoie la hauteur d'un arbre. '''
-        
-        if a.est_vide():
+	def hauteur(ab: Arbre) -> int:
+    ''' Renvoie la hauteur d'un arbre. '''
+
+        if ab.est_vide():
             return -1
         else:
-            return 1 + max(hauteur(a.gauche()), hauteur(a.droite()))
-
-    def nb_feuilles(a: Arbre) -> int:
+            return 1 + max(hauteur(ab.gauche()), hauteur(ab.droite()))
+    
+    def nb_feuilles(ab: Arbre) -> int:
         ''' Renvoie le nombre de feuilles que contient un arbre binaire. '''
         
-        if a.est_vide():
+        if ab.est_vide():
             return 0
-        elif a.est_feuille():
+        elif ab.est_feuille():
             return 1
         else:
-            return nb_feuilles(a.gauche()) + nb_feuilles(a.droite())
-
-    def est_present(a: Arbre, el: int|str) -> bool:
+            return nb_feuilles(ab.gauche()) + nb_feuilles(ab.droite())
+    
+    def est_present(ab: Arbre, el: int|str) -> bool:
         ''' Renvoie True si un noeud contenant l'élément el est présent dans l'arbre, False sinon. '''
         
-        if a.est_vide():
+        if ab.est_vide():
             return False
-        elif a.valeur_racine() == el:
+        elif ab.valeur_racine() == el:
             return True
         else:
-            return est_present(a.gauche()) or est_present(a.droite())
+            return est_present(ab.gauche()) or est_present(ab.droite())
     ```
 
 ## Parcours d'arbres

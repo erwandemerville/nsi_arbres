@@ -68,44 +68,44 @@ class Arbre:
     
 # Quelques mesures et prédicats sur les arbres
 
-def taille(a: Arbre) -> int:
+def taille(ab: Arbre) -> int:
     ''' Renvoie la taille d'un arbre. '''
     
     pass
 
-def hauteur(a: Arbre) -> int:
+def hauteur(ab: Arbre) -> int:
     ''' Renvoie la hauteur d'un arbre. '''
     
     pass
 
-def nb_feuilles(a: Arbre) -> int:
+def nb_feuilles(ab: Arbre) -> int:
     ''' Renvoie le nombre de feuilles que contient un arbre binaire. '''
     
     pass
 
-def est_present(a: Arbre, el: 'int|str') -> bool:
+def est_present(ab: Arbre, el: 'int|str') -> bool:
     ''' Renvoie True si un noeud contenant l'élément el est présent dans l'arbre, False sinon. '''
     
     pass
 
 # Fonctions de parcours d'arbres
 
-def parcours_prefixe(a: Arbre) -> None:
+def parcours_prefixe(ab: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre préfixe. '''
     
     pass
 
-def parcours_suffixe(a: Arbre) -> None:
+def parcours_suffixe(ab: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre suffixe. '''
     
     pass
 
-def parcours_infixe(a: Arbre) -> None:
+def parcours_infixe(ab: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre infixe. '''
     
     pass
 
-def parcours_en_largeur(a: Arbre) -> None:
+def parcours_en_largeur(ab: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en largeur.
     :CU: L'arbre a est NON VIDE '''
     
