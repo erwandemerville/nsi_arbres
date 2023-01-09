@@ -924,7 +924,7 @@ On doit pouvoir déterminer la <strong>hauteur</strong> d'un arbre vide ou non.<
 <p>On rappelle le déroulement des parcours <strong>préfixe</strong>, <strong>infixe</strong> et <strong>suffixe</strong> (ou <em>postfixe</em>). Dans notre implémentation, on se contentera d'<strong>afficher</strong> les <strong>noeuds visités</strong> :</p>
 <div class="admonition info">
 <p class="admonition-title">Déroulement <em>parcours préfixe</em></p>
-<p><em>Précondition</em> : L'arbre <strong>peut être vide</strong><br />
+<p><em>Précondition</em> : L'arbre n'est pas vide<br />
 Le <code>parcours_préfixe</code> se déroule comme suit :</p>
 <ol>
 <li>On <code>affiche</code> le <strong>nœud racine</strong> de l'arbre.</li>
@@ -934,7 +934,7 @@ Le <code>parcours_préfixe</code> se déroule comme suit :</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Déroulement <em>parcours suffixe</em></p>
-<p><em>Précondition</em> : L'arbre <strong>peut être vide</strong><br />
+<p><em>Précondition</em> : L'arbre n'est pas vide<br />
 Le <code>parcours_suffixe</code> se déroule comme suit :</p>
 <ol>
 <li>On effectue le <code>parcours suffixe</code> du <strong>sous-arbre gauche</strong> (s'il est NON vide).</li>
@@ -944,7 +944,7 @@ Le <code>parcours_suffixe</code> se déroule comme suit :</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Déroulement <em>parcours infixe</em></p>
-<p><em>Précondition</em> : L'arbre <strong>peut être vide</strong><br />
+<p><em>Précondition</em> : L'arbre n'est pas vide<br />
 Le <code>parcours_infixe</code> se déroule comme suit :</p>
 <ol>
 <li>On effectue le <code>parcours infixe</code> du <strong>sous-arbre gauche</strong> (s'il est NON vide).</li>
