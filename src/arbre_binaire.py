@@ -66,27 +66,61 @@ class Arbre:
         
         return self.gauche().est_vide() and self.droite().est_vide()
     
+# Les fonctions d'interface (vous pouvez les utiliser au lieu des méthodes de classe, au choix)
+
+def valeur_racine(ab: Arbre) -> 'int|str':
+    return ab.v
+
+def gauche(ab: Arbre) -> Arbre:
+    return ab.g
+
+def droite(ab: Arbre) -> Arbre:
+    return ab.d
+
+def est_vide(ab: Arbre) -> bool:
+    return ab.est_vide()
+
+def est_feuille(ab: Arbre) -> bool:
+    return ab.est_feuille()
+
 # Quelques mesures et prédicats sur les arbres
 
 def taille(ab: Arbre) -> int:
     ''' Renvoie la taille d'un arbre. '''
     
-    pass
+    if est_vide(ab):
+        return 0
+    else:
+        return 1 + taille(gauche(ab)) + taille(droite(ab))
 
 def hauteur(ab: Arbre) -> int:
     ''' Renvoie la hauteur d'un arbre. '''
     
-    pass
+    if est_vide(ab):
+        return -1
+    else:
+        return 1 + max(hauteur(gauche(ab)), hauteur(droite(ab)))
 
 def nb_feuilles(ab: Arbre) -> int:
-    ''' Renvoie le nombre de feuilles que contient un arbre binaire. '''
+    ''' Renvoie le nombre de feuilles d'un arbre binaire. '''
     
-    pass
+    if est_vide(ab):
+        return 0
+    elif est_feuille(ab):
+        return 1
+    else:
+        return nb_feuilles(gauche(a)) + nb_feuilles(droite(a))
 
 def est_present(ab: Arbre, el: 'int|str') -> bool:
     ''' Renvoie True si un noeud contenant l'élément el est présent dans l'arbre, False sinon. '''
     
-    pass
+    if est_vide(ab):
+        return False
+    elif valeur_racine(ab) == el:
+        return True
+    else:
+        return est_present(gauche(a)) or est_present(droite(a))
+    
 
 # Fonctions de parcours d'arbres
 
@@ -94,14 +128,29 @@ def parcours_prefixe(ab: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre préfixe. '''
     
     pass
+        
+def parcours_prefixe_l(ab: Arbre) -> list:
+    ''' Renvoie une liste des valeurs des noeuds de l'arbre parcourus en ordre préfixe. '''
+    
+    pass
 
 def parcours_suffixe(ab: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre suffixe. '''
     
     pass
+    
+def parcours_suffixe_l(ab: Arbre) -> list:
+    ''' Renvoie une liste des valeurs des noeuds de l'arbre parcourus en ordre suffixe. '''
+    
+    pass
 
 def parcours_infixe(ab: Arbre) -> None:
     ''' Affiche les valeurs des noeuds de l'arbre parcourus en ordre infixe. '''
+    
+    pass
+        
+def parcours_infixe_l(ab: Arbre) -> list:
+    ''' Renvoie une liste des valeurs des noeuds de l'arbre parcourus en ordre infixe. '''
     
     pass
 
